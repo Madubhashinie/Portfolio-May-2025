@@ -1,9 +1,8 @@
-
 import { motion } from 'framer-motion';
 import profile from './assets/profile.jpeg';
 import { useEffect, useRef } from 'react';
 
-function Home({ setActiveSection }) {
+function Home({ scrollToSection }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -58,30 +57,30 @@ function Home({ setActiveSection }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
-      className="text-center py-24 relative overflow-hidden"
+      className="text-center min-h-screen relative overflow-hidden flex items-center justify-center"
     >
       <canvas
         ref={canvasRef}
         className="absolute top-0 left-0 w-full h-full z-0"
         style={{ opacity: 0.5 }}
       />
-      <div className="flex flex-col items-center space-y-8 max-w-[90%] mx-auto relative z-10">
+      <div className="flex flex-col items-center space-y-12 max-w-[90%] mx-auto relative z-10">
         <motion.img
           src={profile}
           alt="Tharushi Madubhashinie"
-          className="w-48 h-48 rounded-full object-cover shadow-lg hover:shadow-xl transition-shadow duration-300 md:w-40 md:h-40 sm:w-32 sm:h-32"
+          className="w-56 h-56 rounded-full object-cover shadow-lg hover:shadow-xl transition-shadow duration-300 lg:w-48 lg:h-48 md:w-40 md:h-40 sm:w-32 sm:h-32"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5 }}
         />
         <motion.h1
-          className="text-5xl font-bold mb-6 text-white md:text-4xl sm:text-3xl"
+          className="text-6xl font-bold mb-6 text-[#D3D9D4] lg:text-5xl md:text-4xl sm:text-3xl"
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ repeat: Infinity, duration: 2 }}
         >
           Hi, I'm Tharushi Madubhashinie
         </motion.h1>
-        <p className="text-xl mb-8 text-gray-200 md:text-lg sm:text-base">
+        <p className="text-2xl mb-8 text-[#D3D9D4] lg:text-xl md:text-lg sm:text-base">
           SOFTWARE ENGINEERING UNDERGRADUATE
         </p>
         <motion.div
@@ -89,8 +88,8 @@ function Home({ setActiveSection }) {
           className="inline-block"
         >
           <button
-            onClick={() => setActiveSection('Contact')}
-            className="bg-teal-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-teal-400 transition-colors duration-200 md:px-5 md:py-2 sm:px-4 sm:py-2"
+            onClick={() => scrollToSection('Contact')}
+            className="bg-[#124E66] text-[#D3D9D4] px-8 py-4 rounded-full font-semibold hover:bg-[#748D92] transition-colors duration-200 lg:px-6 lg:py-3 md:px-5 md:py-2 sm:px-4 sm:py-2"
           >
             Get in Touch
           </button>

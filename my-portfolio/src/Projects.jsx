@@ -80,8 +80,8 @@ const projects = [
   {
     title: 'Portfolio Website',
     description: 'This is my personal portfolio website, showcasing my projects and skills.',
-    githubLink: '',
-    websiteLink: '',
+    githubLink: 'https://github.com/Madubhashinie/Portfolio-May-2025',
+    websiteLink: 'https://Tharushi-Madubhashinie-Portfolio.netlify.app/',
     technologies: 'Vite, React.js, Tailwind CSS, Netlify',
     backgroundImage: portfolio,
   },
@@ -109,28 +109,28 @@ function Projects() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 50 }}
       transition={{ duration: 0.5 }}
-      className="py-20 bg-gradient-to-b from-blue-900/50 to-teal-900/50"
+      className="py-20 bg-gradient-to-b from-[#212A31] to-[#124E66]"
     >
-      <h2 className="text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-300 animate-pulse md:text-4xl sm:text-3xl">My Projects</h2>
+      <h2 className="text-5xl font-extrabold text-center mb-12 text-[#D3D9D4] md:text-4xl sm:text-3xl">My Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 sm:gap-4 sm:px-2">
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
             onClick={() => handleClick(index)}
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 255, 255, 0.4)" }}
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(18, 78, 102, 0.4)" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="relative bg-white/20 backdrop-blur-md border border-teal-500/30 rounded-2xl p-6 hover:bg-teal-500/30 transition-all duration-300 ease-out transform hover:-translate-y-2 shadow-lg hover:shadow-xl cursor-pointer overflow-hidden sm:p-4"
+            className="relative bg-[#2E3944]/20 backdrop-blur-md border border-[#748D92]/30 rounded-2xl p-6 hover:bg-[#124E66]/30 transition-all duration-300 ease-out transform hover:-translate-y-2 shadow-lg hover:shadow-xl cursor-pointer overflow-hidden sm:p-4"
             style={{
               backgroundImage: `url(${project.backgroundImage})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className={`absolute inset-0 transition-opacity duration-300 ${selectedProject === index ? 'bg-black/60' : 'bg-black/40'}`}></div> {/* Dynamic overlay */}
+            <div className={`absolute inset-0 transition-opacity duration-300 ${selectedProject === index ? 'bg-[#212A31]/60' : 'bg-[#212A31]/40'}`}></div> {/* Dynamic overlay */}
             <div className="relative z-10">
-              <h3 className="text-2xl font-semibold mb-3 text-white bg-gradient-to-r from-teal-300 to-blue-400 bg-clip-text md:text-xl sm:text-lg"> 
+              <h3 className="text-2xl font-semibold mb-3 text-[#D3D9D4] md:text-xl sm:text-lg"> 
                 {project.title}
               </h3>
               <div className="flex space-x-4 mb-3 sm:space-x-2">
@@ -139,7 +139,8 @@ function Projects() {
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-teal-400 hover:text-teal-300 transition-colors duration-200 text-sm font-medium sm:text-xs"
+                    className="text-[#D3D9D4] hover:text-[#748D92] transition-colors duration-200 text-sm font-medium sm:text-xs"
+                    style={{ textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }}
                   >
                     GitHub
                   </a>
@@ -149,7 +150,8 @@ function Projects() {
                     href={project.websiteLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-teal-400 hover:text-teal-300 transition-colors duration-200 text-sm font-medium sm:text-xs"
+                    className="text-[#D3D9D4] hover:text-[#748D92] transition-colors duration-200 text-sm font-medium sm:text-xs"
+                    style={{ textShadow: '-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000' }}
                   >
                     Visit Website
                   </a>
@@ -161,8 +163,8 @@ function Projects() {
                 transition={{ duration: 0.3 }}
                 className="overflow-hidden"
               >
-                <p className="text-gray-200 mb-4 text-sm leading-relaxed md:text-base sm:text-xs">{project.description}</p>
-                <p className="text-gray-300 mb-4 text-xs italic md:text-sm sm:text-xs">Technologies: {project.technologies}</p>
+                <p className="text-[#D3D9D4] mb-4 text-sm leading-relaxed md:text-base sm:text-xs">{project.description}</p>
+                <p className="text-[#748D92] mb-4 text-xs italic md:text-sm sm:text-xs">Technologies: {project.technologies}</p>
               </motion.div>
             </div>
           </motion.div>

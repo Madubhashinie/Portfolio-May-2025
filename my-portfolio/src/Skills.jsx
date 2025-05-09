@@ -31,26 +31,26 @@ function Skills() {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -50 }}
       transition={{ duration: 0.5 }}
-      className="py-20 bg-gradient-to-b from-teal-900/50 to-blue-900/50"
+      className="py-20 bg-gradient-to-b from-[#212A31] to-[#124E66]"
     >
-      <h2 className="text-5xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-300 animate-pulse md:text-4xl sm:text-3xl">My Skills</h2>
+      <h2 className="text-5xl font-extrabold text-center mb-12 text-[#D3D9D4] md:text-4xl sm:text-3xl">My Skills</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-6xl mx-auto px-4 sm:gap-4 sm:px-2">
         {skills.map((skill) => (
           <motion.div
             key={skill.name}
-            whileHover={{ scale: 1.15, rotate: 5, boxShadow: "0 10px 20px rgba(0, 255, 255, 0.4)" }}
+            whileHover={{ scale: 1.15, rotate: 5, boxShadow: "0 10px 20px rgba(18, 78, 102, 0.4)" }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: skills.indexOf(skill) * 0.1 }}
-            className="flex flex-col items-center p-6 rounded-2xl bg-white/20 backdrop-blur-md border border-teal-500/30 hover:bg-teal-500/30 transition-all duration-300 ease-out transform hover:-translate-y-2 sm:p-4"
+            className="flex flex-col items-center p-6 rounded-2xl bg-[#2E3944]/20 backdrop-blur-md border border-[#748D92]/30 hover:bg-[#124E66]/30 transition-all duration-300 ease-out transform hover:-translate-y-2 sm:p-4"
           >
             <img
               src={skill.icon}
               alt={skill.name}
-              className="w-16 h-16 mb-4 object-contain text-gray-100 hover:text-white transition-colors duration-300 sm:w-12 sm:h-12 sm:mb-2"
+              className="w-16 h-16 mb-4 object-contain sm:w-12 sm:h-12 sm:mb-2"
             />
-            <span className="text-lg font-semibold text-center text-white bg-gradient-to-r from-teal-300 to-blue-400 bg-clip-text sm:text-base">
+            <span className="text-lg font-semibold text-center text-[#D3D9D4] bg-gradient-to-r from-[#748D92] to-[#D3D9D4] bg-clip-text sm:text-base">
               {skill.name}
             </span>
           </motion.div>
